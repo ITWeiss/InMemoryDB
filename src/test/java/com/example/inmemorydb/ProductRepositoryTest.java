@@ -1,6 +1,6 @@
 package com.example.inmemorydb;
 
-import com.example.inmemorydb.entity.Product;
+import com.example.inmemorydb.entity.ProductEntity;
 import com.example.inmemorydb.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class ProductRepositoryTest {
 
     @Test
     public void testProductSaveAndRetrieve() {
-        Product product = new Product(null,"Product1", 10.0);
+        ProductEntity product = new ProductEntity(null,"Product1", 10.0);
 
         repository.save(product);
         assertThat(repository.findAll()).hasSize(1);

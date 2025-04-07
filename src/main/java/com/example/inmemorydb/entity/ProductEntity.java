@@ -5,12 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Сущность продукта
+ *
+ * @author ITWeiss
+ */
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "products")
-public class Product {
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
